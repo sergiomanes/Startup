@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<table width=50% border=1>
+		<tr>
+			<td>Gastos</td>
+			<td>$</td>
+		</tr>
+		<tr>
+			<td>Regalo de cumpleaños de mi hno</td>
+			<td>500</td>
+		</tr>
+		<tr>
+			<td>Comida del perro</td>
+			<td>150</td>
+		</tr>
+		<tr>
+			<td>salir a cenar</td>
+			<td>150</td>
+		</tr>
+
+	</table>
+
+</body>
+</html>
