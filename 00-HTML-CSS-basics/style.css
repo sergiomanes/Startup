@@ -1,0 +1,53 @@
+body{
+	font-size: 14px;
+	font-family: arial;
+	font-weight: bold;
+}
+
+.header{
+		font-size: 46px;
+		background-color: magenta;
+		height: 20%;
+		border-radius: 10%;
+
+}
+
+.footer{
+		font-size: 14px;
+		background-color: magenta;
+		height: 20%;
+		border: 1px;
+		margin-top: 39%;
+		position: relative;
+		border-radius: 10%;
+}
+
+.content {
+		font-size: 14px;
+
+}
+
+.navigation{
+		font-size: :12px;
+		padding-right: 5%;
+		padding-bottom: 38%;
+		background-color: blue;
+		width: 20%;
+		margin-top: 8px;
+		margin-right: 10%;
+		border-radius: 10%;
+		position: absolute;
+}
+
+.sidebar{
+		font-size: 14px;
+		background-color: magenta;
+		padding-right: 5%;
+		margin-left:74% ;
+		padding-bottom: 38%;
+		margin-top: 8px;
+		width: 20%;
+		position: absolute;
+		border-radius: 10%;
+
+}
