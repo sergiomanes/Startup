@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link type="text/css" href="style.css" rel="stylesheet">
+	</head>
+	<body>
+		<form>
+			<legend class="formato">Mi Primer Formulario</legend>
+			<label>Nombre</label>
+			<input class="formato" type="text" name="nombre" required>
+			<label>Apellido</label>
+			<input class="formato" type="text" name="apellido" required>
+			<label>E-mail</label>
+			<input class="formato" type="email" name="email">
+			<label>Fecha de cumpleaños</label>
+			<input class="formato" type="date" name="fcumpleanios" required>
+			<label>Deporte favorito</label>
+			<select name=deporte required>
+				<option value="1"> Futbol </option>
+				<option value="2"> Golf </option>
+				<option value="3"> Voley </option>
+			</select></br></br>
+			<label>Sobre mi:</label>
+			<input class="formato" type="text" name="sobremi" required>
+			<input type="submit" name="aceptar">
+			<input type="reset" name="blanquear">
+
+		</form>
+	</body>
+</html>
