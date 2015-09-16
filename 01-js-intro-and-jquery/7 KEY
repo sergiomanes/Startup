@@ -8,8 +8,12 @@
 		<script>
 			$(document).on('ready', function(){
 				$('#seccion').fadeIn();
-				$('#boton').on('onclick', function(){
-					$.get("http://bootcamp.aws.af.cm/welcome/yourname")});
+				$('#boton').click(function(){
+					var data= $.getJSON("http://bootcamp.aws.af.cm/welcome/yourname");
+					console.log(data);
+					alert(data.responseText);
+				})
+
 				})
 								
 		</script>
