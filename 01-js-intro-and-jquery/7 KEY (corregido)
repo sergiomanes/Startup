@@ -7,11 +7,12 @@
 		<title>topic1</title>
 		<script>
 			$(document).on('ready', function(){
-				$('#seccion').fadeIn();
-				$('#boton').click(function(){
-					var data= $.getJSON("http://bootcamp.aws.af.cm/welcome/yourname");
-					console.log(data);
-					alert(data.responseText);
+				$('#seccionPpal').fadeIn();
+				$('#botonCapturar').click(function(){
+					var data;
+					$.getJSON("http://bootcamp.aws.af.cm/welcome/yourname",function(data){
+					console.log(data);	
+					});
 				})
 
 				})
@@ -26,10 +27,10 @@
 			<article><p>texto largo</p></article>
 			<footer>Pie del Section</footer>
 		</section>
-		<section id="seccion" hidden>
-			<h2 id="h2">"Hello World"</h2>
+		<section id="seccionPpal" hidden>
+			<h2 id="Titulo">"Hello World"</h2>
 		</section>
-		<button id="boton">Capturar</buttom>
+		<button id="botonCapturar">Capturar</buttom>
 
 		<aside ></aside>
 		<footer></footer>
