@@ -12,8 +12,6 @@ section{
 	
 }
 
-.aDerecha{
-	margin-left: 90%;
-	position: absolute;
-
+#SecSpoty{
+	text-align: right;
 }
