@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery-2.1.4.js" type="text/javascript"></script>
+		<link href="style.css" rel="stylesheet">
+		<meta charset="utf-8">
+		<title>topic1</title>
+		<script>
+			$(document).on('ready', function(){
+				
+				$('#seccionPpal').fadeIn();
+
+				$('#botonCapturar').click(function(){
+					//var data; No es necesaria
+					//$.getJSON("http://bootcamp.aws.af.cm/welcome/yourname",function(data){ // deberia ir tu nombre
+					$.getJSON("http://bootcamp.aws.af.cm/welcome/Sergio",function(data){
+						console.log(data);	
+						//mostrar la info en el dom
+						$('#seccionPpal').find("#Titulo").html(data.response); 
+						//user nomenclatura camelCaseParaNombresDeVariables
+					    //usar guiones para clases de JS main-title
+					});
+				});
+
+				//var music	-  No es necesaria...
+				$.ajax({
+					url:"https://api.spotify.com/v1/search",
+					type:"get",
+					data:{
+						q:"Rolling Stones",
+						type:"album"
+					}
+				}).done(
+					function(music){	// aca es donde tengo q laburar con el for
+						var elemPadre= document.getElementById("SecSpoty");//entre comillas el ID
+						var elemArticle; //cuando las variables van contener elementos del dom es una buena practica empezar el nombre con $, por ejemplo: var $elemArticle;
+						console.log(music);
+						for(var i=0;i<music.albums.items.length-1;i++) // los array empiezan de index 0
+						{
+							elemArticle= document.createElement("article");
+							elemPadre.appendChild(elemArticle);	
+							//aca es elemArticle.... tenias puesto solo article
+							elemArticle.innerHTML= music.albums.items[i].name+", "+music.albums.items[i].type+", "+music.albums.items[i].release_date+", "+music.albums.items[i].link+" - "+music.albums.items[i].image;
+							//las ultimas 3 propiedades no existen.
+						}
+					}
+				);
+
+			})
+								
+		</script>
+	</head>
+	<body>
+		<header></header>
+		<nav></nav>
+		<section>
+			<header><h1>Titulo Principal Section</h1></header>
+			<article><p>texto largo</p></article>
+			<footer>Pie del Section</footer>
+		</section>
+		<section id="seccionPpal" hidden>
+			<h2 id="Titulo">"Hello World"</h2>
+		</section>
+		<button id="botonCapturar">Capturar</button><!-- mal escrito </buttom>  -->
+		<section id="SecSpoty">
+		</section>
+
+		<aside ></aside>
+		<footer></footer>
+	</body>
+</html>
